@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 HOMEPAGE</title>
+    <style>
+
+        /*
+        style 태그 내에서는
+        DOM의 여러 요소에 동일한 조건의 style을 지정할 수 있다.
+
+        이 때 tag, id, class를 지정할 수 있는데 
+        tag, id, class들을 DOM Selector라고 부른다
+        지정자 또는 선택자
+
+        selector를 선택하고 style을 지정하면
+        다수의 문서에 대하여 thema 형식의 ui를 구현할 수 있다.
+        */
+
+
+        /* 
+        이문서(index.html)에 있는 h5 오브젝트의 style을 지정하겠다.
+        */
+        h5 {
+            font-size: 20pt;
+            /* color 속성을 rgb 함수를 사용하여 설정
+            color 속성은 Text의 색을 지정하는 */
+            color : deeppink;
+            background-color: rgba(110, 250, 117, 0.8);
+            width: fit-content;
+            padding: 10px;
+        }
+        p{
+            font-style: italic;
+        }
+
+        /* p tag 중에 p1 class가 지정된 object*/
+        p.p1 {
+            color: tomato;
+        }
+
+        /*
+        클래스 단독으로 설정하면 태그의 종류와 관계없이
+        같은 이름의 클래스가 지정된 모든 오브젝트에 동일한 sytle 지정된다.
+        p1 클래스가 지정된 p, h5 태그에 동일한 sytle이 지정.
+        */
+        .p1 {
+            font-weight: bolder;
+        }
+
+        body {
+            font-family: 'Noto Sans CJK KR Medium', Arial, Helvetica, sans-serif;
+        }
+
+        /* h5 태그 중에서 id가 wrap으로 지정된 Object만 설정해라*/
+        h5#wrap {
+            background-color: blanchedalmond;
+        }
+
+        /*id 값은 tag를 지정하지 않고 사용할 수 있다. */
+        #wrap {
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>반갑습니다</h1>
+    <h5 class ="p1">p tag</h5>
+    <!-- tag에 클래스 지정-->
+    <!-- tag에 클래스를 저장하면 특별하게 별도의
+        오브젝트로 관리하기가 유리하다.
+        클래스는 같은 이름을 중복하여 작성하여도 된다.
+    -->
+    <p class = "p1">p태그는 문단을 나타내는 
+        문서의 기본이며 가장 많이 사용하는 tag</p>
+    <p>HTML으로 작성한 문서는 한 tag 내에서는 
+       Enter(줄바꿈)이 빈 칸 한 칸으로 인식된다.
+    </p>
+    <p  class = "p1">Enter를 아무리 눌러도 소스에서는 보이지만
+        Web 화면에서는 한 줄로 나타날 뿐이다.
+
+    <h5>자동 줄바꿈</h5>        
+        <p>한 tag내에 작성된 텍슨\트는 특별한 tag를 사용하지 않으면 한 줄에 표시된다. 
+            다만, 실제 web화면에서 화면 폭 보다 큰 텍스트 라인은 자동으로 줄바꿈된다
+            (auto wrap)
+        </p>
+    
+    <!--tag 에 id 값을 지정하여 특별하게 관리하기 -->
+    <!--id 값은 한 문서내에서는 절대 중복 금지 -->
+    <!-- tag가 달라도 id 값은 중복 금지-->
+    <h5 id="wrap">강제 줄바꿈</h5>
+        <p>문단내에서 강제로 줄바꿈을 하고 싶다<br/>
+            br은 단독으로 써주고 반드시 self close 헤야함
+            <br/>
+            문단내에서 갈제 줄바꿈을 하고 싶다면 br태그를 쓴다.
+            <br/> br태그로 강제 줄바꿈을 한 경우는 문단을 나눈 것과 달리
+            줄 간격이 한 문단내의 다른 텍스트 라인과 같다
+        </p>
+</body>
+</html>
