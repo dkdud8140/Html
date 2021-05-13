@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block line</title>
+    
+    <style>
+        p {
+            background-color: black;
+            color: blanchedalmond;
+            padding: 10px;
+            margin : 20px;
+        }
+
+        label {
+            background-color: aqua;
+            padding: 10px;
+            margin : 20px;
+        }
+
+        a {
+            background-color: yellow;
+            color: lime;
+            padding: 10px;
+            margin : 20px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <p>
+        Block Tag : 포함된 내용(text)에 관계없이 화면의 전체 폭(width)을 자신의 영역으로 만든다 <br/>
+        width를 지정하면 화면에 뵈으는 영역은 폭이 줄어들지만 차지하는 영역은 그대로이다.<br/>
+        이런 이유로 Block Tag는 절대 한 라인에 두 개의 Tag를 나란히 둘 수 없다.<br/>
+        일반덕으로 layout을 만드는 Tag들 : h, p, div, table, form
+    </p>
+    <p>
+        Inline Tag : 포함된 내용(text)의 크기만큼만 자신의 영역으로 만든다.<br/>
+        width를 지정해도 효과가 없다.<br/>
+        Inline Tag는 포함된 내용의 크기에 따라 한 라인에 다수의 Tag가 나올 수 있따.<br/>
+        label, a, input, button, li
+    </p>
+    <p>대한민국 만세</p>
+    <p>Republic of Korea</p>
+    <label>우리나라만세</label>
+    <label>Viva Korea</label>
+
+    <p><a href = "http://naver.com">네이버</a></p>
+    <a href = "https://daum.net">DAUM</a>
+    <a href = "https://google.com">GOOGLE</a>
+</body>
+</html>
