@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      table {
+        border: 1px solid fuchsia;
+
+        /*
+            table collapse를 separate르 설정하고 spacing을 설정하면
+             표의 cell과 cell의 간격을 설정할 수 있다.
+        */
+        border-collapse: separate;
+        border-spacing: 5px;
+
+        width: 50%;
+        margin: 10px auto;
+      }
+      th,
+      td {
+        border: 1px solid brown;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <colgroup>
+        <col width="15%" />
+        <col width="15%" />
+        <col width="55%" />
+        <col width="15%" />
+      </colgroup>
+      <caption>
+        학생정보
+      </caption>
+      <thead>
+        <tr>
+          <th scope="row">학번</th>
+          <th scope="row">이름</th>
+          <th scope="row">주소</th>
+          <th scope="row">전화번호</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>김선호</td>
+          <td>서울시</td>
+          <td>000-0000-0000</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>박충재</td>
+          <td>서울시</td>
+          <td>000-0000-0000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>웹접근성과 table</h3>
+    <p>table에 thead 영역의 tag에 scope 지정</p>
+    <p>scope = "col", scope = "raw" 를 지정할 수 있다.</p>
+    <p>scope = "col" 위에서 아래로 읽기</p>
+    <p>scope = "raw" 왼쪽에서 오른쪽으로 읽기</p>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /*
+        Web Browser의 화면은
+        width는 보여지는 영역으로 일정한 크기를 갖는다
+        하지만 height는 스크롤 기능이 있어서
+        일정한 크기가 설정되어 있지 않다
+        box의 width를 설정하면 원하는 폭 만큼의 box를 만들 수 있다
+        하지만 height는 %로 지정할 때 
+        기준이 되는 높이가 없어서
+        원하는 크기만큼 만들 수 없다
+
+        그래서 초기에 html 전체의 높이를 지정해주고
+        그리고 이후에 다른 tag의 높이를 %로 지정할 수 있다.
+
+        현재화면에서는
+        화면ㅇ르 가득 채우는 layout을 설정하기 위해
+        html의 height를 100%로 설정하ㅣ였다
+      */
+      html {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+      }
+
+      header {
+        background-color: maroon;
+        color: white;
+        padding: 2rem;
+        text-shadow: 2px 2px 2px black;
+        text-align: center;
+      }
+
+      nav {
+        background-color: blue;
+        color: white;
+      }
+
+      nav ul {
+        display: flex;
+        list-style-type: none;
+      }
+
+      nav li {
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+
+      nav li:hover {
+        background-color: turquoise;
+        color: black;
+      }
+
+      nav li:first-child:hover {
+        background-color: blanchedalmond;
+        color: #000;
+      }
+
+      nav li:nth-child(4) {
+        margin: auto;
+      }
+
+      footer {
+        background-color: crimson;
+        color: white;
+        padding: 5px;
+      }
+
+      address {
+        text-align: center;
+        margin: 10px auto;
+      }
+
+      section {
+        height: 90%;
+        display: flex;
+      }
+
+      aside {
+        width: 20%;
+        background-color: turquoise;
+      }
+
+      article {
+        width: 60%;
+        background-color: yellow;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MY HOME</h1>
+      <p>My Home Page 방문을 환영합니다</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li>HOME</li>
+        <li>내소개</li>
+        <li>공지사항</li>
+        <li>개ㅔㄹ러리</li>
+      </ul>
+    </nav>
+
+    <section>
+      <aside>left</aside>
+      <article>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+        <p>대한민국만세~~~올~~~~ctr + alt + shift + 아래커서</p>
+      </article>
+      <aside>right</aside>
+    </section>
+
+    <footer>
+      <address>CopyRight #</address>
+    </footer>
+  </body>
+</html>
