@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Html</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      table td {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!--<table>
+      <tr>
+        <td>이름</td>
+        <td>전화번호</td>
+        <td>주소</td>
+      </tr>
+
+      <tr>
+        <td>고길동</td>
+        <td>010-0000-0000</td>
+        <td>둘리네 집</td>
+      </tr>
+    </table>
+-->
+  </body>
+
+  <script>
+    // 위에 보이는 table을 JS 코드를 사용하여 만들어보기
+
+    /*
+    let body = document.querySelector("body");
+
+    let table = document.createElement("table");
+
+    let tr1 = document.createElement("tr");
+    let td1 = document.createElement("td");
+    td1.innerHTML("이름");
+
+    let td2 = document.createElement("td");
+    td2.innerHTML("전화번호");
+
+    let td3 = document.createElement("td");
+    td3.innerHTML("주소");
+
+    tr1.appendChild(td1);
+    tr1.appendChild(td2);
+    tr1.appendChild(td3);
+
+    table.appendChild(tr1);
+
+    document.querySelector("body").appendChild(table);
+*/
+    const titles = ["이름", "전화번호", "주소"];
+    const data = ["고길동", "02", "둘리집"];
+
+    let table1 = document.createElement("table");
+    let tr = document.createElement("tr");
+    for (let i = 0; o < titles.length; i++) {
+      let td = document.createElement("td");
+      td = titles[i];
+      tr.appendChild(td);
+    }
+    table1.appendChild(tr);
+
+    document.querySelector("body").appendChild(table1);
+  </script>
+</html>
