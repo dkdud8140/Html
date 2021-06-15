@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title></title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+font-family: "Noto Sans KR", sans-serif;
+font-size: 2vh;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+html,
+body {
+width: 100vw;
+height: 100vh;
+}
+body {
+background-image: url("로고/BG-V2_1.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+header {
+opacity: 1;
+width: 100%;
+height: 15%;
+}
+div.h_container {
+height: 100%;
+padding-top: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logo {
+width: 15.6%;
+margin: auto;
+}
+#menu {
+position: absolute;
+right: 0;
+width: 30px;
+height: 30px;
+margin-top: 1%;
+margin-right: 3%;
+display: flex;
+flex-direction: column;
+}
+#menu span {
+width: 100%;
+height: 20%;
+background-color: white;
+display: inline-block;
+right: 0;
+position: absolute;
+transition: 0.5s;
+border-radius: 10px;
+}
+#menu span.top {
+top: 10px;
+}
+#menu span.bot {
+top: 20px;
+}
+#menu.active span.top {
+top: 0;
+transform: rotate(45deg);
+transition: 0.5s;
+}
+#menu.active span.mid {
+background-color: transparent;
+}
+#menu.active span.bot {
+top: 0;
+transform: rotate(-45deg);
+transition: 0.5s;
+}
+@media screen and (max-width: 786px) {
+.logo {
+width: 35%;
+}
+.menu {
+width: 10%;
+}
+}
+section.a {
+width: 100%;
+height: 85vh;
+position: relative;
+}
+section.a div {
+font-size: 1.8vw;
+}
+div.a1 {
+background-color: white;
+width: 30vw;
+height: 58vh;
+border-radius: 10%;
+position: absolute;
+top: 20%;
+left: 35%;
+transform: translate(-50% -50%);
+}
+div.profile img {
+width: 80px;
+height: 80px;
+position: absolute;
+top: 3%;
+left: 30%;
+}
+div.proname {
+position: absolute;
+top: 8%;
+left: 48%;
+}
+div.id p {
+position: absolute;
+top: 28%;
+left: 10%;
+}
+#id_input {
+position: absolute;
+top: 28%;
+left: 26%;
+border: 0;
+border-bottom: 1px solid black;
+width: 300px;
+outline: none;
+border-radius: 8px;
+}
+div.pw {
+position: absolute;
+top: 41%;
+left: 10%;
+}
+#pw_input {
+position: absolute;
+top: 4%;
+left: 117%;
+border: 0;
+border-bottom: 1px solid black;
+width: 300px;
+border-radius: 8px;
+outline: none;
+}
+div.nick {
+position: absolute;
+top: 54%;
+left: 10%;
+}
+#nick_input {
+position: absolute;
+top: 4%;
+left: 160%;
+border: 0;
+border-bottom: 1px solid black;
+width: 300px;
+border-radius: 8px;
+outline: none;
+}
+div.email {
+position: absolute;
+top: 67%;
+left: 10%;
+}
+#email_input {
+position: absolute;
+top: 4%;
+left: 160%;
+border: 0;
+border-bottom: 1px solid black;
+width: 300px;
+border-radius: 8px;
+outline: none;
+}
+div.infos button {
+border: skyblue;
+border-radius: 25px;
+width: 7vw;
+height: 4vh;
+position: absolute;
+top: 80%;
+left: 42%;
+background-color: skyblue;
+color: white;
+cursor: pointer;
+}
+div.infos button:hover {
+box-shadow: 1px 2px rgba(0, 0, 0, 0.5);
+}
+div.pws button {
+border: skyblue;
+border-radius: 25px;
+width: 7vw;
+height: 4vh;
+position: absolute;
+top: 80%;
+left: 70%;
+background-color: skyblue;
+color: white;
+cursor: pointer;
+}
+div.pws button:hover {
+box-shadow: 1px 2px rgba(0, 0, 0, 0.5);
+}
+section.b {
+width: 30vw;
+height: 30vh;
+background-color: gray;
+position: absolute;
+top: 43%;
+left: 35%;
+display: none;
+}
+main.new_page div {
+font-size: 1.8vh;
+}
+div.pw_title {
+position: absolute;
+top: 8%;
+left: 35%;
+}
+div.now_pw {
+position: absolute;
+top: 25%;
+left: 5%;
+}
+#now_input {
+position: absolute;
+top: 3%;
+left: 130%;
+border: 0;
+border-bottom: 1px solid black;
+width: 300px;
+outline: none;
+}
+div.new_pw {
+position: absolute;
+top: 45%;
+left: 5%;
+}
+#new_input {
+position: absolute;
+top: 3%;
+left: 130%;
+border: 0;
+border-bottom: 1px solid black;
+width: 300px;
+outline: none;
+}
+div.ag_pw {
+position: absolute;
+top: 65%;
+left: 5%;
+}
+#ag_input {
+position: absolute;
+top: 3%;
+left: 130%;
+border: 0;
+border-bottom: 1px solid black;
+width: 300px;
+outline: none;
+}
+div.pw_ok button {
+position: absolute;
+top: 80%;
+left: 47%;
+border-radius: 25px;
+background-color: gray;
+box-shadow: 1px 2px rgba(0, 0, 0, 0.5);
+width: 7vw;
+height: 4vh;
+}
+div.quit button {
+position: absolute;
+top: 80%;
+left: 75%;
+border-radius: 25px;
+background-color: gray;
+box-shadow: 1px 2px rgba(0, 0, 0, 0.5);
+width: 7vw;
+height: 4vh;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="h_container">
+<img class="logo" src="로고/logo-original.svg" />
+<div id="menu">
+<span class="top"></span>
+<span class="mid"></span>
+<span class="bot"></span>
+</div>
+</div>
+</header>
+<section class="a">
+<div class="a1">
+<div class="profile">
+<img src="로고/profile.svg" />
+</div>
+<div class="proname">
+<h2>익명000님</h2>
+</div>
+<p class="bt"></p>
+<div class="id">
+<p>아 이 디</p>
+<div>
+<input
+type="text"
+id="id_input"
+placeholder="아이디를 입력하세요"
+/>
+</div>
+</div>
+<div class="pw">
+<p>비 밀 번 호</p>
+<div>
+<input
+type="password"
+id="pw_input"
+placeholder="패스워드를 입력하세요"
+/>
+</div>
+</div>
+<div class="nick">
+<p>닉 네 임</p>
+<div>
+<input
+type="text"
+id="nick_input"
+placeholder="닉네임을 입력하세요"
+/>
+</div>
+</div>
+<div class="email">
+<p>이 메 일</p>
+<div>
+<input
+type="email"
+id="email_input"
+placeholder="이메일을 입력하세요"
+/>
+</div>
+</div>
+<div class="infos">
+<button>정보 수정</button>
+</div>
+<div class="pws">
+<button type="button" id="modal_btn">비밀번호 변경</button>
+</div>
+</div>
+</section>
+<section class="b">
+<div class="main_newpage">
+<div class="pw_title">
+<h2>비밀번호 수정</h2>
+</div>
+<div class="now_pw">
+<p>현재 비밀번호</p>
+<div>
+<input type="text" id="now_input" placeholder="입력하세요" />
+</div>
+</div>
+<div class="new_pw">
+<p>변경 비밀번호</p>
+<div>
+<input type="password" id="new_input" placeholder="" />
+</div>
+</div>
+<div class="ag_pw">
+<p>비밀번호 확인</p>
+<div>
+<input type="password" id="ag_input" placeholder="" />
+</div>
+</div>
+<div class="pw_ok">
+<button>변경하기</button>
+</div>
+</div>
+<div class="quit">
+<button id="modal_x">취소</button>
+</div>
+</section>
+</body>
+<script>
+let menu = document.getElementById("menu");
+let flag = false;
+menu.addEventListener("click", function () {
+if (!flag) {
+menu.classList.add("active");
+flag = true;
+} else {
+menu.classList.remove("active");
+flag = false;
+}
+});
+window.onload = function () {
+function onClick() {
+document.querySelector(".b").style.display = "block";
+document.querySelector(".main_newpage").style.display = "block";
+}
+function offClick() {
+document.querySelector(".b").style.display = "none";
+document.querySelector(".main_newpage").style.display = "none";
+}
+document.getElementById("modal_btn").addEventListener("click", onClick);
+document.getElementById("modal_x").addEventListener("click", offClick);
+};
+</script>
+</html>

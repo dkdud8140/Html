@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            transition: 1s;
+        }
+        div.box1 {
+
+            /*
+                container를 flex로 하고
+                justify-content: space-around; 하면
+                flex-item들의 간격이 균등하게 됨    
+            */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div.box1 div {
+            width: 100px;
+            height: 100px;
+            /*rotate(deg) : 회전하기
+            skew(x축, y축) : 각 축으로 기울이기*/
+            transform: rotate(45deg) skew(-25deg, -15deg);
+            position: relative;
+        }
+
+        div.blue {
+            background-color: blue;
+        }
+        
+        div.green {
+            background-color: green;
+        }
+        
+        div.pink {
+            background-color: pink;
+        }
+
+        /*
+            pa chs : pa에 포함된 모든 chs
+            pa> chs : 직계 chs만
+        */
+
+        /*
+            transform(CSS3)
+            box 도형의 회전, 깅ㄹ기, 위치 등을 조절하여
+            단순 사각형 모양이 아닌 기하하적 모양을 만드는 속성
+            
+            translate(x,y)
+            translateX(), translateY()
+            객체를 이동하는 속성
+
+            rotation() : 객체를 회전
+            양수 : cw, 음수 : cc
+
+            scal(x,y) : x축, y축으로 양수(음수)만큼 줄이기
+
+            skew(x,y)
+            x축 y축으로 기울기
+
+        */
+
+
+        div.box1 > div > div {
+            /*
+                부모 박스와 같은 모양으로 변형
+            */
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: skew(0, 0);
+        }
+
+        div.box1 div div:nth-child(1){
+            opacity: 0.8;
+        }
+
+        
+        div.box1 div div:nth-child(1){
+            opacity: 0.6;
+        }
+
+        div.box1 > div:hover {
+            transform: rotate(45deg) skew(-35deg, -30deg) translate(140px, -40px);
+        }
+
+        div.box1 > div:hover > div:nth-child(1){
+            transform: translate(20px, 20px);
+        }
+        
+        div.box1 > div:hover > div:nth-child(2){
+            transform: translate(40px, 40px);
+        }
+
+
+        p{
+            border-left: 7px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform</h1>
+    <div class = "box1">
+        <div class="blue">
+            <div class="blue"></div>
+            <div class="blue"></div>
+        </div>
+
+        <div  class="green">
+            <div class="green"></div>
+            <div class="green"></div>
+        </div>
+        <div class="pink">
+            <div class="pink"></div>
+            <div class="pink"></div>
+        </div>
+    </div>
+</body>
+</html>

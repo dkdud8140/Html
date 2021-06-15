@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.main {
+            width: 500px;
+            height: 600px;
+            border: 1px solide gold;
+            margin: 10px auto;
+        }
+
+        div.view {
+            width: 100%;
+            height: 500px;
+            border: 1px solid springgreen;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+        
+            let images = [];
+            for(let i = 0 ; i< 10 ; i ++) {
+
+                // Math.radom() : 0 ~ 1 미만의 난수 실수를 생성
+                // Math.floor() : 소수점 이하를 잘라 정수로
+
+                // Math.floor(Math.random() * (max-min)) + min
+                // min부터 max 미만의 정소를 생성하는 코드
+                
+                // Math.floor(Math.random()*(max - min +1)) + min
+                //min으로부토 max(포함) 까지의 정수를 생성하는 코드
+                let imgNum = Math.floor(Math.random()* (7-1+1))+1;
+                let img_src = 'images_${imgNum}.jpg';
+                co
+            }
+        })
+      </script>
+</head>
+<body>
+    <div class="main">
+        <div class="view"></div>
+        <div class = "ticker"></div>
+
+    </div>
+</body>
+</html>

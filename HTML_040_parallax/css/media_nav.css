@@ -1,0 +1,16 @@
+@media screen and (max-width:768px) {
+    nav#main_nav div.menu_toggle {
+        display: block;
+    }
+
+    nav#main_nav h1 {
+        font-size: 20px;
+    }
+
+    nav#main_nav ul {
+        display: block;
+        width: 100%;
+        visibility: hidden;
+        height: 0vh;
+    }
+}
