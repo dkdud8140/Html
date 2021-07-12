@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <style>
+    div {
+      padding: 2rem;
+      width: 50%;
+      margin: 10px auto;
+      border: 1px solid blue;
+
+      /*
+                    box-shodow를 안쪽으로 펼치는데
+                    size 등등이 모두 0으로 보이ㅣ지 않는 상태
+                */
+      box-shadow: 0 0 0 0 #aaa inset;
+      transition: 1s;
+    }
+
+    div:nth-of-type(1):hover {
+      box-shadow: 0 1000px 0 0 #ddd inset;
+    }
+
+    div:nth-of-type(2):hover {
+      box-shadow: 1000px 0 0 0 #ddd inset;
+    }
+  </style>
+  <body>
+    <div>HOME</div>
+    <div>My page</div>
+    <div>게시판</div>
+  </body>
+</html>

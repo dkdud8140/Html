@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="ko">
+        <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        
+<header>
+	<div id="header_box">
+		<a href="${rootPath}" ><h3>AY's Gallery</h3></a>
+		<nav id="main_nav" >
+			<ul>
+				<li id="home">HOME</li>
+				<li id="input">이미지등록</li>
+				<li id="login">로그인</li>
+				<li id="join">회원가입</li>
+				<li id="logout">로그아웃</li>
+			</ul>
+		</nav>
+	</div>
+
+</header>
+
+        
+    </body>
+
+    <script>
+       let main_nav = document.querySelector("nav#main_nav")
+	
+	if(main_nav) {
+			main_nav.addEventListener("click", (e)=>{
+				let menu = e.target
+				
+				alert(menu)
+				
+				if(menu == "LI") {
+					
+					let menuName = menu.id
+					
+					if(menuName === "join") {
+						alert(menuName)
+					} else if(menuName === "login") {
+						alert(menuName)
+					} else if(menuName === "logout") {
+						alert(menuName)
+					} else if(menuName === "image_create") {
+						alert(menuName)
+					} else if(menuName === "home") {
+						alert(menuName)
+					}
+				}
+				
+			}))
+	}
+
+
+</script>
+
+    </html>

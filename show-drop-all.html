@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      nav li {
+        width: 200px;
+        list-style: none;
+      }
+      nav.top {
+        background-color: violet;
+      }
+
+      nav.top ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav.top li {
+        border-bottom: 3px solid transparent;
+        color: white;
+        padding: 12px 16px;
+      }
+
+      nav.top li:nth-of-type(4) {
+        margin-left: auto;
+      }
+
+      nav.top li:hover {
+        border-bottom: 3px solid yellow;
+      }
+
+      nav.sub {
+        display: flex;
+      }
+      nav.sub ul:nth-of-type(4) {
+        margin-left: auto;
+      }
+
+      nav.sub li {
+        padding: 12px 16px;
+        position: relative;
+      }
+
+      nav.sub li:hover:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 12px;
+        right: 0;
+        border-bottom: 1px solid springgreen;
+      }
+
+      nav.sub {
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        transition: ease-out 1s;
+      }
+
+      section.nav_box:hover nav.sub {
+        visibility: visible;
+        height: 100%;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="nav_box">
+      <nav class="top">
+        <ul>
+          <li>HOME</li>
+          <li>공지사항</li>
+          <li>마이페이지</li>
+          <li>자유게시판</li>
+        </ul>
+      </nav>
+
+      <nav class="sub">
+        <ul>
+          <li></li>
+        </ul>
+        <ul>
+          <li>전체공지</li>
+          <li>이벤트</li>
+          <li>부서별공지</li>
+        </ul>
+        <ul>
+          <li>자유게시판</li>
+          <li>이미지갤러리</li>
+          <li>Q&A</li>
+        </ul>
+        <ul>
+          <li>로그인</li>
+          <li>회원가입</li>
+          <li>1:1문의</li>
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>
